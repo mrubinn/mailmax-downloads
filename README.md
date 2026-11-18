@@ -19,7 +19,17 @@ The beta organizer must add your Google account to the approved tester list. Goo
 
 Startup checks and automatic downloading default on; change them in Settings > Updates. Windows installs a verified update when you close MAILMAX after saving drafts. Pending sends postpone installation. Mac beta updates are downloaded for you to open and replace the application manually.
 
-Your app connects directly to Google. Mail is cached locally and account tokens are protected using operating-system encryption. This download repository does not receive your mailbox or saved sign-ins. Cloud scheduling, read receipts, and AI features are off during this beta.
+Your app connects directly to Google. Mail is cached locally and account tokens are protected using operating-system encryption. This download repository does not receive your mailbox or saved sign-ins. Cloud scheduling and AI features are unavailable during this beta.
+
+## Read receipt privacy
+
+Starting with MAILMAX 0.12.0, outgoing read receipts are the default choice after you review the first-send disclosure. You can send without tracking or change the setting for each account under Settings → Reading. Sharing your verified MAILMAX opens is a separate opt-in.
+
+The receipt service runs on Google Cloud. It receives a Google sign-in token to verify your identity and the recipient addresses needed to match verified opens. It keeps hashed account and recipient lookup values, opening timestamps, and the email addresses of MAILMAX readers who opt in to sharing a verified open. Only the sender can retrieve that message’s receipt history. The service does not receive your Gmail access token, refresh token, message body, subject, or attachments.
+
+An external email app may load a small image and register an External open. Image blocking, caching, and preloading can affect those events. The service retains receipt records for up to 90 days. Disabling outgoing tracking affects future messages. Tracking images already sent remain active until their records expire.
+
+Contact your beta organizer privately with questions about receipt data.
 
 ## Feedback
 
